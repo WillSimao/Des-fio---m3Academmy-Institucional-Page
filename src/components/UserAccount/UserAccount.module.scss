@@ -1,0 +1,55 @@
+@import '../../styles/utils/Variables.scss';
+
+
+.wrapper-userAccount {
+    &__ul {
+        display: flex;
+        column-gap: 55px;
+        align-items: center;
+        &__li-entrar {
+            a {
+                font-family: $font-family;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                color: $color-white1;
+                text-transform: uppercase;
+                transition: all .5s ease-in-out;
+                &:hover {
+                    color: $color-blue1;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .wrapper-userAccount {
+        &__ul {
+            &__li-cart {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .wrapper-userAccount {
+        &__ul {
+            &__li-entrar {
+                a {
+                    font-size: 28px;
+                    line-height: 33px;
+                }
+            }
+            &__li-cart {
+                a {
+                    img {
+                        width: 54.68px;
+                    }
+                }
+            }
+        }
+    }
+}

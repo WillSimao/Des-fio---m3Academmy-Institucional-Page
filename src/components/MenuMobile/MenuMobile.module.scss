@@ -1,0 +1,11 @@
+@import '../../styles/utils/Variables.scss';
+
+.container-modal {
+    button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: transparent;
+            border: none;
+        }
+    }

@@ -1,0 +1,252 @@
+@import '../../styles/utils/Variables.scss';
+
+
+.container {
+    max-width: 748px;
+    width: 100%;
+    &__form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+        max-width: 748px;
+        width: 100%;
+        &__title {
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: $color-black1;
+        }
+        &__input {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            max-width: 748px;
+            width: 100%;
+            label {
+                font-family: $font-family;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                color: $color-black3;
+                margin: 0 15px 12px;
+            }
+            input {
+                max-width: 748px;
+                width: 100%;
+                height: 46px;
+                padding: 15px 20px;
+                border: 1px solid $color-black3;
+                border-radius: 25px;
+                font-family: $font-family;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                &::placeholder {
+                    color: $color-grey2;
+                }
+            }
+            &__feedback {
+                font-family: $font-family;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+                margin-right: 20px;
+                text-align: end;
+                color: $color-red1;
+                position: absolute;
+                top: 15px;
+                right: 0;
+            }
+        }
+    }
+    &__checkbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 748px;
+        width: 100%;
+        position: relative;
+        input {
+            width: 18.64px;
+            height: 18px;
+            margin-left: 4.28px;
+            border: 1px solid $color-black1;
+            border-radius: 3px;
+        }
+        u {
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: $color-black1;
+        }
+        &__alert {
+            color: $color-red1;
+        }
+        &__errorCheck {
+            color: $color-red1;
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;    
+            position: absolute;
+            top: 3px;
+            right: 115px;  
+        }
+    }
+    
+    &__button {
+        max-width: 748px;
+        width: 100%;
+        button {
+            max-width: 748px;
+            width: 100%;
+            height: 52.44px;
+            border: none;
+            border-radius: 25px;
+            background-color: $color-black1;
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            color: $color-white1;
+            cursor: pointer;
+            transition: all ease-in-out 200ms;
+            &:hover {
+                background-color: $color-black3;
+            }
+        }
+        &__span {
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: $color-green1;
+            margin-top: 12px;
+        }
+    }
+    .invalid {
+        border-color: $color-red1;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .container {
+        &__checkbox {
+            max-width: 992px;
+            &__errorCheck {
+                right: 92px !important;
+                top: 17px
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1024px)  {
+    .container {
+        max-width: 992px;
+        &__form {
+            max-width: 992px;
+            width: 100%;
+            margin-top: 30px;
+            &__title {
+                text-align: center;
+            }
+            &__input {
+                max-width: 992px;
+                input {
+                    max-width: 992px;
+                }
+            }
+        }
+        &__checkbox {
+            max-width: 992px;
+            &__errorCheck {
+                right: 235px;
+            }
+        }
+        
+        &__button {
+            max-width: 992px;
+            button {
+                max-width: 992px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 2500px) {
+    .container {
+        max-width: 1680px;
+        width: 100%;
+        &__form {
+            max-width: 1680px;
+            &__title {
+                font-size: 48px;
+                line-height: 56px;
+            }
+            &__input {
+                max-width: 1680px;
+                width: 100%;
+                label {
+                    font-size: 28px;
+                    line-height: 33px;
+                }
+                input {
+                    max-width: 1680px;
+                    width: 100%;
+                    height: 63px;
+                    font-size: 28px;
+                    line-height: 33px;
+                }
+                &__feedback {  
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+        }
+        &__checkbox {
+            max-width: 1680px;
+            width: 100%;
+            input {
+                width: 36.4px;
+                height: 35.15px;
+                margin-left: 4.28px;
+            }
+            u {
+                font-size: 28px;
+                line-height: 33px;
+            }
+            &__errorCheck { 
+                font-size: 24px;
+                right: 325px;    
+            }
+        }
+        
+        &__button {
+            max-width: 1680px;
+            width: 100%;
+            button {
+                max-width: 1680px;
+                width: 100%;
+                height: 71px;
+                font-size: 32px;
+                line-height: 38px;
+            }
+            &__span {
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+    }
+}

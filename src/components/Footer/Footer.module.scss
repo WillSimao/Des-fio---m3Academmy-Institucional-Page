@@ -1,0 +1,171 @@
+@import '../../styles/utils/Variables.scss';
+
+.footer {
+    background-color: $color-black1;
+    padding: 20px 100px;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__text {
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 12px;
+            text-transform: capitalize;
+            color: $color-white1;
+            max-width: 243px;
+            width: 100%;
+        }
+        &__payments {
+            display: flex;
+            column-gap: 12px;
+            align-items: center;
+            &__row {
+                border-right: 1px solid $color-grey1;
+                height: 25px;
+            }
+            img {
+                height: 20px;
+                width: 36px;
+                &:nth-child(9) {
+                   width: 54.61px;
+                   height: 34px;
+                }
+            }
+        }
+        &__text2 {
+            display: flex;
+            align-items: center;
+            column-gap: 13px;
+            p {
+                font-family: $font-family;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 12px;
+                text-transform: capitalize;
+                color: $color-white1;
+            }
+        }
+    }
+    &__contact {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .footer {
+        &__container {
+            display: flex;
+            align-items: unset;
+            justify-content: unset;
+            flex-direction: column;
+            row-gap: 15px;
+            &__text {
+                display: flex;
+                order: 2;
+            }
+            
+            &__text2 {
+                order: 3;
+            }
+            &__payments {
+                column-gap: 11px;
+                img {
+                    width: 30px;
+                    height: 17px;
+                    &:nth-child(9) {
+                       width: 45px;
+                       height: 28px;
+                    }
+                }
+            }
+        }
+        &__contact {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+            position: absolute;
+            right: 16px;
+            margin-top: 12px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .footer {
+        padding: 15px 16px;
+        display: flex;
+        justify-content: space-between;
+        &__container {
+            display: flex;
+            align-items: unset;
+            justify-content: unset;
+            flex-direction: column;
+            row-gap: 15px;
+            &__text {
+                display: flex;
+                order: 2;
+            }
+            &__text2 {
+                order: 3;
+            }
+        }
+        &__contact {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+            position: absolute;
+            right: 16px;
+        }
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .footer {
+        background-color: $color-black1;
+        padding: 24.5px 100px;
+        &__container {
+            &__text {
+                font-size: 20px;
+                line-height: 23px;
+                max-width: 467px;
+            }
+            &__payments {
+                display: flex;
+                column-gap: 12px;
+                img {
+                    width: 70px;
+                    height: 39.27px;
+                    &:nth-child(9) {
+                        width: 106px;
+                        height: 66px;
+                    }
+                }
+            }
+            &__text2 {
+                display: flex;
+                align-items: center;
+                column-gap: 12px;
+                p {
+                    font-size: 20px;
+                    line-height: 23px;
+                }
+                img {
+                    &:nth-child(2) {
+                        width: 84.22px;
+                    }
+                    &:nth-child(4) {
+                        width: 54.95px;
+                    }   
+                }
+            }
+        }
+        &__contact {
+            display: none;
+        }
+    }
+}

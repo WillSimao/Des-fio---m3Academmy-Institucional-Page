@@ -1,0 +1,17 @@
+@import '../../styles/utils/Variables.scss';
+
+.headerMobile {
+    background-color: $color-black1;
+    padding: 25px 16px;
+    &__logo-cart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .headerMobile {
+        display: none;
+    }
+}

@@ -1,0 +1,35 @@
+@import '../../styles/utils/Variables.scss'; 
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    &__picture {
+        display: flex;
+        column-gap: 10px;
+    }
+    a {
+        font-family: $font-family;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: $color-black2;
+    }
+}
+
+@media only screen and (min-width: 2500px) {    
+    .container {
+        &__picture {
+            img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+        a {
+            font-size: 28px;
+            line-height: 33px;
+        }
+    }
+}

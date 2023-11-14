@@ -1,0 +1,87 @@
+@import '../../styles/utils/Variables.scss';
+
+.header {
+    background-color: $color-black1;
+    &__wrapper-top {
+        padding: 22px 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-grey1;
+        &__picture {
+            &__img1280 {
+                img {
+                    display: block;
+                }
+            }
+            &__img2500 {
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__wrapper-botom {
+        padding: 14px 100px;
+        &__ul {
+            display: flex;
+            align-items: center;
+            column-gap: 55px;
+            &__li {
+                a {
+                    font-family: $font-family;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: $color-white1;
+                    text-transform: uppercase;
+                    transition: all .5s ease-in-out;
+                    &:hover {
+                        color: $color-blue1;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .header {
+        display: none;
+        &__wrapper-top {
+            padding: 25px 16px;
+        }
+        &__wrapper-botom {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .header {
+        &__wrapper-top {
+            &__picture {
+                &__img1280{
+                    img {
+                        display: none;
+                    }
+                }
+                &__img2500 {
+                    img {
+                        display: block;
+                    }
+                }
+            }
+        }
+        &__wrapper-botom {
+            &__ul {
+                &__li {
+                    a {
+                        font-size: 28px;
+                        line-height: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
